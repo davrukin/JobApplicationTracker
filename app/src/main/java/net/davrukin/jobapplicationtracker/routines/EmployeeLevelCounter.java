@@ -26,6 +26,7 @@ public class EmployeeLevelCounter {
                 cLevel++;
             }
         }
+        return quantity;
     }
 
 }

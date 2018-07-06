@@ -1,12 +1,18 @@
-package net.davrukin.jobapplicationtracker
+package net.davrukin.jobapplicationtracker.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.navigation.NavController
+import androidx.navigation.NavHost
+import net.davrukin.jobapplicationtracker.R
 import net.davrukin.jobapplicationtracker.routines.Wrappers
-import net.davrukin.jobapplicationtracker.ui.start.StartFragment
+import net.davrukin.jobapplicationtracker.ui.fragments.StartFragment
 
-class StartActivity : AppCompatActivity() {
+class StartActivity : AppCompatActivity(), NavHost {
+
+    override fun getNavController(): NavController {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

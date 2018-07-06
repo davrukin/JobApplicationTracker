@@ -3,15 +3,15 @@
     package="net.davrukin.jobapplicationtracker">
 
     <application
+        android:name=".JobApplicationTracker"
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor"
-        android:name=".JobApplicationTracker">
-        <activity android:name="net.davrukin.jobapplicationtracker.StartActivity">
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activities.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +21,7 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activities.NewJobApplicationActivity"></activity>
     </application>
 
 </manifest>
