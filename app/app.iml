@@ -140,6 +140,7 @@
     <orderEntry type="library" name="Gradle: com.android.support:support-media-compat-27.1.1" level="project" />
     <orderEntry type="library" name="Gradle: androidx.print:print-1.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.persistence:db-framework-1.1.1-rc1" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.recyclerview:recyclerview-1.0.0-beta01" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.gson:gson:2.8.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.persistence.room:common:1.1.1-rc1@jar" level="project" />
     <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxjava:2.1.6@jar" level="project" />
@@ -205,12 +206,15 @@
     <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.0.0-beta01@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: android.arch.navigation:navigation-testing-ktx-1.0.0-alpha02" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core-2.0.0-beta01" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.cardview:cardview-1.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement-license-11.6.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-process-2.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.navigation:navigation-ui-1.0.0-alpha02" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.transition:transition-1.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater-1.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: androidx.fragment:fragment-1.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: androidx.loader:loader-1.0.0-beta01" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.material:material-1.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel-2.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.navigation:navigation-runtime-ktx-1.0.0-alpha02" level="project" />
     <orderEntry type="library" name="Gradle: androidx.room:room-guava-2.0.0-beta01" level="project" />

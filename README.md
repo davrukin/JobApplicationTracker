@@ -1,4 +1,4 @@
-# Job-Application-Tracker
+# JobApplicationTracker
 An Android app to track statuses of job applications
 
 ## Libraries used:

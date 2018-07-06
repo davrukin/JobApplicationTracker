@@ -53,5 +53,6 @@ dependencies {
     implementation "android.arch.work:work-firebase:$work_version"
     // optional - Test helpers
     androidTestImplementation "android.arch.work:work-testing:$work_version"
+    implementation 'com.google.android.material:material:1.0.0-beta01'
 
 }
