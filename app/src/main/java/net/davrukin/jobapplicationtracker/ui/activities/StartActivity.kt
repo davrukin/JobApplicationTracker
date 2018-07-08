@@ -36,4 +36,7 @@ class StartActivity : AppCompatActivity(), NavHost {
 
     }
 
+	override fun onSupportNavigateUp(): Boolean {
+		return super.onSupportNavigateUp()
+	}
 }

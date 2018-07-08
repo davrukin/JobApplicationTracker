@@ -34,6 +34,4 @@ class StartFragment : Fragment() { // for some reason not working as NavHostFrag
         // TODO: Use the ViewModel
     }
 
-
-
 }
