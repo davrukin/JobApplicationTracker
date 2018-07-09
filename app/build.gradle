@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.dokka-android'
+
 
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "net.davrukin.jobapplicationtracker"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -20,6 +20,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '28.0.1'
+}
+
+androidExtensions {
+    experimental = true
 }
 
 dependencies {
@@ -55,4 +60,6 @@ dependencies {
     androidTestImplementation "android.arch.work:work-testing:$work_version"
     implementation 'com.google.android.material:material:1.0.0-beta01'
 
+    // fastlist
+    implementation "bg.devlabs.fastlist:fast-list:1.2"
 }

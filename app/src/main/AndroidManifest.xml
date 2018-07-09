@@ -21,7 +21,9 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.NewJobApplicationActivity"></activity>
+        <activity
+            android:name=".ui.activities.NewJobApplicationActivity">
+        </activity>
     </application>
 
 </manifest>

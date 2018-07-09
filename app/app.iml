@@ -35,7 +35,7 @@
           <option name="apiVersion" value="1.2" />
           <option name="pluginOptions">
             <array>
-              <option value="plugin:org.jetbrains.kotlin.android:experimental=false" />
+              <option value="plugin:org.jetbrains.kotlin.android:experimental=true" />
               <option value="plugin:org.jetbrains.kotlin.android:enabled=true" />
               <option value="plugin:org.jetbrains.kotlin.android:defaultCacheImplementation=hashMap" />
             </array>
@@ -222,6 +222,7 @@
     <orderEntry type="library" name="Gradle: androidx.vectordrawable:vectordrawable-animated-1.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-core-utils-1.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: org.checkerframework:checker-compat-qual:2.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.2.50@jar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-extensions-2.0.0-beta01" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-annotations:27.1.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:animated-vector-drawable-27.1.1" level="project" />
@@ -234,6 +235,7 @@
     <orderEntry type="library" name="Gradle: org.reactivestreams:reactive-streams:1.0.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement-11.6.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.viewpager:viewpager-1.0.0-beta01" level="project" />
+    <orderEntry type="library" name="Gradle: bg.devlabs.fastlist:fast-list-1.2" level="project" />
     <orderEntry type="library" name="Gradle: androidx.slidingpanelayout:slidingpanelayout-1.0.0-beta01" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12@jar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.work:work-firebase-1.0.0-alpha04" level="project" />
