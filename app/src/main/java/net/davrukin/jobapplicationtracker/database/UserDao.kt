@@ -2,13 +2,16 @@ package net.davrukin.jobapplicationtracker.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import androidx.sqlite.db.SupportSQLiteQuery
 import io.reactivex.Flowable
 import net.davrukin.jobapplicationtracker.models.User
 
 @Dao
 interface UserDao {
 
-    @Insert
+	// TODO: make sure these don't occur on the main thread
+
+	@Insert
     fun insert(user: User)
 
     @Update
@@ -19,6 +22,9 @@ interface UserDao {
 
     @Query("SELECT * FROM User")
     fun getUser(): LiveData<User>
+
+    @RawQuery
+    fun getUserViaQuery(query: SupportSQLiteQuery): LiveData<User>
 
 
 }

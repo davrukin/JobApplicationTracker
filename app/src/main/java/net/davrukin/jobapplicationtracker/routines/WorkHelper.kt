@@ -11,11 +11,11 @@ import java.util.concurrent.TimeUnit
 class WorkHelper {
 
 	private var worker: OneTimeWorkRequest ?= null
-	private var lifecycleOwner: LifecycleOwner ?= null
+	//private var lifecycleOwner: LifecycleOwner ?= null
 
 	init {
 		worker = OneTimeWorkRequestBuilder<Workers>().build()
-		lifecycleOwner = LifecycleOwner()
+		//lifecycleOwner = LifecycleOwner()
 	}
 
 	fun startWork() {
@@ -27,12 +27,12 @@ class WorkHelper {
 	}
 
 	fun getStatus() {
-		WorkManager.getInstance()!!.getStatusById(worker!!.id)
+		/*WorkManager.getInstance()!!.getStatusById(worker!!.id)
 			.observe(lifecycleOwner, Observer { workStatus ->
 				if (workStatus != null && workStatus.state.isFinished) {
 					// do something
 				}
-			})
+			})*/
 	}
 
 	fun setConstraints() {
@@ -109,11 +109,11 @@ class WorkHelper {
 
 		// now get the result data
 		WorkManager.getInstance()!!.getStatusById(myDataWork.id)
-				.observe(this, Observer { status ->
+				/*.observe(this, Observer { status ->
 					if (status != null && status.state.isFinished) {
 						val myResult = status.outputData.getString("RESULT_KEY", "")
 						println("myResult: $myResult")
 					}
-				})
+				})*/
 	}
 }

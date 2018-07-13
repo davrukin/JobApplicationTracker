@@ -16,7 +16,12 @@ import net.davrukin.jobapplicationtracker.R
 import net.davrukin.jobapplicationtracker.ui.viewmodels.StartViewModel
 import com.list.rados.fast_list.bind
 import com.list.rados.fast_list.update
+import kotlinx.android.synthetic.main.job_application_item.view.*
+import net.davrukin.jobapplicationtracker.R.layout.job_application_item
 import net.davrukin.jobapplicationtracker.extensions.bind
+import net.davrukin.jobapplicationtracker.models.ApplicationStatus
+import net.davrukin.jobapplicationtracker.models.JobApplication
+import net.davrukin.jobapplicationtracker.models.Offer
 
 class StartFragment : Fragment() { // for some reason not working as NavHostFragment()
 
@@ -30,7 +35,7 @@ class StartFragment : Fragment() { // for some reason not working as NavHostFrag
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
 	    button_add_job_app.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.newJobApplicationFragment, savedInstanceState))
 		recyclerView = recycler_view
-	    setUpRecyclerView()
+	    setUpRecyclerView2()
 
         return inflater.inflate(R.layout.start_fragment, container, false)
     }
@@ -51,10 +56,21 @@ class StartFragment : Fragment() { // for some reason not working as NavHostFrag
 	 * Simple Single Layout List with Custom Layout
 	 */
 	private fun setUpRecyclerView2() {
-		val list = listOf<String>("pizza", "hamburger", "hotdog", "antelope", "lion", "tiger")
-		/*recyclerView.bind(list, ) {it : Item ->
-
-		}*/
+		//val list = listOf<String>("pizza", "hamburger", "hotdog", "antelope", "lion", "tiger")
+		val ja1 = JobApplication("Apple", "Software Engineer", ApplicationStatus.APPLIED, Offer(false))
+		val ja2 = JobApplication("Google", "Site Reliability Engineer", ApplicationStatus.CODING_CHALLENGE, Offer(false))
+		val ja3 = JobApplication("Microsoft", "Office Engineer", ApplicationStatus.INITIAL_NO, Offer(false))
+		val ja4 = JobApplication("LinkedIn", "Underwater Basket Weaver", ApplicationStatus.ON_SITE_INTERVIEW, Offer(false))
+		val ja5 = JobApplication("HP", "Spectre Agent", ApplicationStatus.OFFER, Offer(true))
+		val list2 = listOf<JobApplication>(ja1, ja2, ja3, ja4, ja5)
+		recyclerView.bind(list2, job_application_item) { ja: JobApplication ->
+			textView_company.text = ja.company
+			textView_position.text = ja.position
+			textView_status.text = ja.status.name
+			textView_offer.text = ja.offer.given.toString()
+			// TODO: click on card, if clicked, show more details like offer info
+			// TODO: ability to compare offers or other company attributes
+		}
 	}
 
 	/**

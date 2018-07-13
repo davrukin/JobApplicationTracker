@@ -29,6 +29,12 @@ class Wrappers {
         fun getApplicationsFromUser(user: User): LiveData<MutableList<JobApplication>> {
             return user.applications
         }
+
+        fun byUser(): LiveData<User>? {
+            return JobApplicationTracker.db
+                    ?.userDao
+                    ?.getUser()
+        }
     }
 
     object JobApplications {
