@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: bg.devlabs.fastlist:fast-list:1.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-fast-list-1.2.aar/1e99e214fc921a86a062da92e4a5f23d/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-fast-list-1.2.aar/1e99e214fc921a86a062da92e4a5f23d/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/bg.devlabs.fastlist/fast-list/1.2/9e6518efc7e0a640fd0cae336733b78ce0d77203/fast-list-1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

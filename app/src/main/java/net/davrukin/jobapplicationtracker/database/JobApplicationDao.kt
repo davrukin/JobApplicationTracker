@@ -38,7 +38,7 @@ interface JobApplicationDao {
     @Query("SELECT * FROM job_application WHERE offer LIKE :offer")
     fun findJobApplicationsWithOffer(offer: Offer): LiveData<List<JobApplication>>
 
-    @RawQuery
+    @RawQuery(observedEntities = [(JobApplication::class)])
     fun getJobApplicationViaQuery(query: SupportSQLiteQuery): LiveData<JobApplication>
 
 }

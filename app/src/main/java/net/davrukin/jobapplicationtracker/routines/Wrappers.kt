@@ -32,7 +32,7 @@ class Wrappers {
 
         fun byUser(): LiveData<User>? {
             return JobApplicationTracker.db
-                    ?.userDao
+                    ?.userDao()
                     ?.getUser()
         }
     }
@@ -41,13 +41,13 @@ class Wrappers {
 
         fun byCompany(company: String): LiveData<List<JobApplication>>? {
             return JobApplicationTracker.db
-                    ?.jobApplicationDao
+                    ?.jobApplicationDao()
                     ?.findJobApplicationsByCompany(company)
         }
 
         fun withPosition(position: String): LiveData<List<JobApplication>>? {
             return JobApplicationTracker.db
-                    ?.jobApplicationDao
+                    ?.jobApplicationDao()
                     ?.findJobApplicationsWithPosition(position)
         }
 
@@ -79,7 +79,7 @@ class Wrappers {
 
             private fun jobApplicationByStatus(status: ApplicationStatus): LiveData<List<JobApplication>>? {
                 return JobApplicationTracker.db
-                        ?.jobApplicationDao
+                        ?.jobApplicationDao()
                         ?.findJobApplicationsWithStatus(status)
             }
         }
@@ -95,7 +95,7 @@ class Wrappers {
 
             private fun jobApplicationByOffer(offer: Offer): LiveData<List<JobApplication>>? {
                 return JobApplicationTracker.db
-                        ?.jobApplicationDao
+                        ?.jobApplicationDao()
                         ?.findJobApplicationsWithOffer(offer)
             }
         }

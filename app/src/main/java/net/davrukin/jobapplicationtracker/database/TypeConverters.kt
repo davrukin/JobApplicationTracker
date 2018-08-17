@@ -9,6 +9,9 @@ import net.davrukin.jobapplicationtracker.models.JobApplication
 import net.davrukin.jobapplicationtracker.models.Offer
 import net.davrukin.jobapplicationtracker.models.User
 
+/**
+ * Contains all TypeConverters for the local Room database
+ */
 class TypeConverters {
 
 	// convert JobApplication()
@@ -157,6 +160,23 @@ class TypeConverters {
 	@TypeConverter
 	fun toStringLiveData(json: String): LiveData<String> {
 		val type = object : TypeToken<LiveData<String>>(){}.type
+		return Gson().fromJson(json, type)
+	}
+
+	/**
+	 * Type converter for LiveData<MutableList<JobApplication>>
+	 */
+	@TypeConverter
+	fun fromJobApplicationMutableListLiveData(ja: LiveData<MutableList<JobApplication>>): String {
+		return toJsonString(ja)
+	}
+
+	/**
+	 * Type converter for LiveData<MutableList<JobApplication>>
+	 */
+	@TypeConverter
+	fun toJobApplicationMutableListLiveData(json: String): LiveData<MutableList<JobApplication>> {
+		val type = object : TypeToken<LiveData<MutableList<JobApplication>>>(){}.type
 		return Gson().fromJson(json, type)
 	}
 }

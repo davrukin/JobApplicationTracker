@@ -1,5 +1,6 @@
 package net.davrukin.jobapplicationtracker.extensions
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -51,9 +52,7 @@ fun <T> RecyclerView.update(newItems: List<T>) {
     (adapter as? FastListAdapterAX<T>)?.update(newItems) { o, n -> o == n }
 }
 
-
-open class FastListAdapterAX<T>(private var items: MutableList<T>, private var list: RecyclerView
-) : RecyclerView.Adapter<FastListViewHolderAX<T>>() {
+open class FastListAdapterAX<T>(private var items: MutableList<T>, private var list: RecyclerView): RecyclerView.Adapter<FastListViewHolderAX<T>>() {
 
     private inner class BindMap(val layout: Int, var type: Int = 0, val bind: View.(item: T) -> Unit, val predicate: (item: T) -> Boolean)
 
@@ -62,8 +61,7 @@ open class FastListAdapterAX<T>(private var items: MutableList<T>, private var l
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FastListViewHolderAX<T> {
         return bindMap.first { it.type == viewType }.let {
-            FastListViewHolderAX(LayoutInflater.from(parent.context).inflate(it.layout,
-                    parent, false), viewType)
+            FastListViewHolderAX(LayoutInflater.from(parent.context).inflate(it.layout, parent, false), viewType)
         }
     }
 
@@ -77,7 +75,9 @@ open class FastListAdapterAX<T>(private var items: MutableList<T>, private var l
     override fun getItemViewType(position: Int) = try {
         bindMap.first { it.predicate(items[position]) }.type
     } catch (e: Exception) {
-        0
+        Log.d("GetItemViewType Ex", e.toString())
+	    e.printStackTrace()
+	    0
     }
 
     /**

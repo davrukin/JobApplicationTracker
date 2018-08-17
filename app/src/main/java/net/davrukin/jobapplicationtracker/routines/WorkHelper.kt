@@ -1,7 +1,7 @@
 package net.davrukin.jobapplicationtracker.routines
 
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.Observer
+//import android.arch.lifecycle.LifecycleOwner
+//import android.arch.lifecycle.Observer
 import androidx.work.*
 import java.util.concurrent.TimeUnit
 
@@ -14,7 +14,7 @@ class WorkHelper {
 	//private var lifecycleOwner: LifecycleOwner ?= null
 
 	init {
-		worker = OneTimeWorkRequestBuilder<Workers>().build()
+		//worker = OneTimeWorkRequestBuilder<Workers>().build() // TODO: FIX
 		//lifecycleOwner = LifecycleOwner()
 	}
 
@@ -41,16 +41,18 @@ class WorkHelper {
 				.setRequiresCharging(true)
 				.build()
 
-		val work = OneTimeWorkRequestBuilder<Workers>().setConstraints(myConstraints).build()
+		//val work = OneTimeWorkRequestBuilder<Workers>().setConstraints(myConstraints).build() // TODO: FIX
 	}
 
+	// TODO: FIX
 	fun runPeriodicTask() {
-		val builder = PeriodicWorkRequestBuilder<Workers>(12, TimeUnit.HOURS)
-		val work = builder.build()
-		WorkManager.getInstance()!!.enqueue(work)
+		//val builder = PeriodicWorkRequestBuilder<Workers>(12, TimeUnit.HOURS)
+		//val work = builder.build()
+		//WorkManager.getInstance()!!.enqueue(work)
 	}
 
-	fun runChainedTasks() {
+	// TODO: FIX
+	/*fun runChainedTasks() {
 		val myConstraints1 = Constraints.Builder()
 				//.setRequiresDeviceIdle(true)
 				.setRequiresCharging(true)
@@ -97,10 +99,11 @@ class WorkHelper {
 			.enqueue()
 
 		// can also check status of chain or work
-		println(chain2.statuses.value)
-	}
+		//println(chain2.statuses.value) // doesn't like import, uncomment later
+	}*/
 
-	fun runWorkWithParameters(userID: String, jamID: String) {
+	// TODO: FIX
+	/*fun runWorkWithParameters(userID: String, jamID: String) {
 		val myData: Data = mapOf("ARG_USER_ID" to userID, "ARG_JAM_ID" to jamID).toWorkData()
 
 		val myDataWork = OneTimeWorkRequestBuilder<Workers>().setInputData(myData).build()
@@ -108,12 +111,12 @@ class WorkHelper {
 		WorkManager.getInstance()!!.enqueue(myDataWork)
 
 		// now get the result data
-		WorkManager.getInstance()!!.getStatusById(myDataWork.id)
+		//WorkManager.getInstance()!!.getStatusById(myDataWork.id) // doesn't like import, uncomment later
 				/*.observe(this, Observer { status ->
 					if (status != null && status.state.isFinished) {
 						val myResult = status.outputData.getString("RESULT_KEY", "")
 						println("myResult: $myResult")
 					}
 				})*/
-	}
+	}*/
 }

@@ -1,12 +1,13 @@
 package net.davrukin.jobapplicationtracker
 
 import android.app.Application
+import androidx.multidex.MultiDexApplication
 import androidx.room.Room
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import net.davrukin.jobapplicationtracker.database.AppDatabase
 
-class JobApplicationTracker : Application() {
+class JobApplicationTracker : MultiDexApplication() {
 
     companion object {
         var db: AppDatabase ?= null

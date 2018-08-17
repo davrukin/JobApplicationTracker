@@ -23,7 +23,7 @@ interface UserDao {
     @Query("SELECT * FROM User")
     fun getUser(): LiveData<User>
 
-    @RawQuery
+    @RawQuery(observedEntities = [(User::class)])
     fun getUserViaQuery(query: SupportSQLiteQuery): LiveData<User>
 
 

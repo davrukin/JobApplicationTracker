@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: android.arch.navigation:navigation-testing:1.0.0-alpha05@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-navigation-testing-1.0.0-alpha05.aar/c844e0e3710445c5e9d5d43f7e871eac/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-navigation-testing-1.0.0-alpha05.aar/c844e0e3710445c5e9d5d43f7e871eac/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.navigation/navigation-testing/1.0.0-alpha05/6fe30f51b93f286539d89b2279d595c7a349f28d/navigation-testing-1.0.0-alpha05-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
